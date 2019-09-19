@@ -1,14 +1,8 @@
 {
   "name": "electron-auto-update-test",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
-  "build": {
-    "appId": "com.electron.testapp",
-    "productName": "test app",
-    "publish": "github",
-    "copyright" : "Copyright © 2019 rdhaliwal97"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
@@ -17,7 +11,24 @@
     "dist": "electron-builder -w",
     "gh-publish": "electron-builder -w -p always"
   },
-  "repository": "git@https://github.com/Rdhaliwal97/electron-auto-update-test.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rdhaliwal97/electron-auto-update-test.git"
+  },
+  "build": {
+    "appId": "com.electron.testapp",
+    "productName": "test app",
+    "target": [
+      "NSIS",
+      "zip"
+    ],
+    "publish": "github",
+    "copyright": "Copyright © 2019 rdhaliwal97",
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    }
+  },
   "author": "Manpreet Singh <rdhaliwal97@outlook.com>",
   "license": "ISC",
   "bugs": {
@@ -27,6 +38,7 @@
   "devDependencies": {
     "electron": "^6.0.9",
     "electron-builder": "^21.2.0",
+    "release": "^6.1.0",
     "yarn": "^1.17.3"
   },
   "dependencies": {
