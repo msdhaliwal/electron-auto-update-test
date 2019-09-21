@@ -46,5 +46,5 @@ autoUpdater.on('download-progress', progressObj=>{
 });
 
 autoUpdater.on('update-downloaded', progressObj=>{
-  win.webContents.send('message', 'update_downloaded', autoUpdater);
+  win.webContents.send('message', 'update downloaded and will be installed once app is closed');
 });
