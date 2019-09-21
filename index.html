@@ -13,7 +13,9 @@
     ipcRenderer.on('message', (event, text, obj)=>{
       console.log('msg: ', text);
       if(obj){
-        console.log('obj :', obj);
+        let response = confirm('update downloded. do you restart and install now ?')
+        if(response) autoUpdater.quitAndInstall();
+        else console.log('app will be updated when all windows are closed');
       }
     });
   </script>

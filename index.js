@@ -46,6 +46,5 @@ autoUpdater.on('download-progress', progressObj=>{
 });
 
 autoUpdater.on('update-downloaded', progressObj=>{
-  win.webContents.send('message', 'update_downloaded', obj);
-  // autoUpdater.quitAndInstall();
+  win.webContents.send('message', 'update_downloaded', autoUpdater);
 });
