@@ -19,7 +19,7 @@
     "appId": "com.electron.testapp",
     "productName": "testApp",
     "publish": "github",
-    "copyright": "Copyright © 2019 rdhaliwal97",
+    "copyright": "Copyright © 2019 rdhaliwal97"
   },
   "author": "Manpreet Singh <rdhaliwal97@outlook.com>",
   "license": "ISC",
