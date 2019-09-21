@@ -7,11 +7,14 @@
   <title>Electron-auto-update-test</title>
 </head>
 <body>
-  <h1>Welcome to v1.0.17</h1>
+  <h1>Welcome to v1.0.18</h1>
   <script>
     const {ipcRenderer} = require('electron');
-    ipcRenderer.on('message', (event, text)=>{
+    ipcRenderer.on('message', (event, text, obj)=>{
       console.log('msg: ', text);
+      if(obj){
+        console.log('obj :', obj);
+      }
     });
   </script>
 </body>
