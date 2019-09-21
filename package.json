@@ -8,8 +8,8 @@
     "start": "electron .",
     "release": "build",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder -w",
-    "gh-publish": "electron-builder -w -p always"
+    "dist": "electron-builder -m",
+    "gh-publish": "electron-builder -m -p always"
   },
   "repository": {
     "type": "git",
@@ -18,13 +18,8 @@
   "build": {
     "appId": "com.electron.testapp",
     "productName": "testApp",
-    "target": "NSIS",
     "publish": "github",
     "copyright": "Copyright © 2019 rdhaliwal97",
-    "nsis": {
-      "allowToChangeInstallationDirectory": true,
-      "oneClick": false
-    }
   },
   "author": "Manpreet Singh <rdhaliwal97@outlook.com>",
   "license": "ISC",
