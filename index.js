@@ -25,10 +25,6 @@ app.on("activate", () => {
   if (win === null) createWindow();
 });
 
-autoUpdater.on('checking-for-update', _=>{
-  win.webContents.send('message', 'checking for update');
-});
-
 autoUpdater.on('update-available', info=>{
   win.webContents.send('message', 'update available');
 });

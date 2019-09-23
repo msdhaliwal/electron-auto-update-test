@@ -19,7 +19,11 @@
     "appId": "com.electron.testapp",
     "productName": "testApp",
     "target": "NSIS",
-    "publish": "github",
+    "publish": [{
+      "provider": "github",
+      "owner": "rdhaliwal97",
+      "repo": "appReleases"
+    }],
     "copyright": "Copyright © 2019 rdhaliwal97",
     "nsis": {
       "allowToChangeInstallationDirectory": true,
