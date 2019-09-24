@@ -1,6 +1,6 @@
 {
   "name": "electron-auto-update-test",
-  "version": "1.0.18",
+  "version": "1.0.21",
   "description": "demo app to test auto-update for electron apps using electron-updater package",
   "main": "index.js",
   "scripts": {
@@ -13,13 +13,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Rdhaliwal97/electron-auto-update-test.git"
+    "url": "https://github.com/Rdhaliwal97/appReleases.git"
   },
   "build": {
     "appId": "com.electron.testapp",
     "productName": "testApp",
+    "target": "NSIS",
     "publish": "github",
-    "copyright": "Copyright © 2019 rdhaliwal97"
+    "copyright": "Copyright © 2019 rdhaliwal97",
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    }
   },
   "author": "Manpreet Singh <rdhaliwal97@outlook.com>",
   "license": "ISC",
