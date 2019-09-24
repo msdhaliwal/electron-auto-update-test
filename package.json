@@ -1,6 +1,6 @@
 {
   "name": "electron-auto-update-test",
-  "version": "1.0.18",
+  "version": "1.0.21",
   "description": "demo app to test auto-update for electron apps using electron-updater package",
   "main": "index.js",
   "scripts": {
@@ -9,21 +9,17 @@
     "release": "build",
     "pack": "electron-builder --dir",
     "dist": "electron-builder -w",
-    "publish": "build -p always"
+    "gh-publish": "electron-builder -w -p always"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Rdhaliwal97/electron-auto-update-test.git"
+    "url": "https://github.com/Rdhaliwal97/appReleases.git"
   },
   "build": {
     "appId": "com.electron.testapp",
     "productName": "testApp",
     "target": "NSIS",
-    "publish": [{
-      "provider": "github",
-      "owner": "rdhaliwal97",
-      "repo": "appReleases"
-    }],
+    "publish": "github",
     "copyright": "Copyright © 2019 rdhaliwal97",
     "nsis": {
       "allowToChangeInstallationDirectory": true,
